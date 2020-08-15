@@ -37,18 +37,18 @@ function setup() {
 	boxright.shapeColor=("red");
 	boxbottom.shapeColor=("red");
 
-	boxbottombody = Bodies.rectangle(width/2,height-50,200,20, {isStatic:true} );
-	World.add(world,boxbottombody);
-
 	engine = Engine.create();
 	world = engine.world;
+
+	boxbottombody = Bodies.rectangle(width/2,height-50,200,20, {isStatic:true} );
+	World.add(world,boxbottombody);
 
 	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.5, isStatic:true});
 	World.add(world, packageBody);
 	
 
 	//Create a Ground
-	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
+	ground = Bodies.rectangle(width/2, 640, width, 10 , {isStatic:true} );
  	World.add(world, ground);
 
 
